@@ -12,16 +12,8 @@ func main() {
 }
 
 func PrintIf(str string) string {
-    phrase := Invalid Input
-	str1 := []rune(str)
-	for i := 0; i <= len(str1); i++ {
-		if i >= 3 || i == 3 {
-			fmt.Println('G')
-			fmt.Println('\n')
-		} else {
-			fmt.Println("phrase")
-			fmt.Println('\n')
-			}
-	}
-	return PrintIf(str)
+    if len(str) == 0 || len(str) >= 3 {
+        return "G\n"
+    }
+    return "Invalid Input\n"
 }
